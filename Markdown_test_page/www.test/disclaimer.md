@@ -1,0 +1,9 @@
+[TITLE]
+DISCLAIMER
+
+[CONTENT]
+# Disclaimer
+
+Lore..
+
+[CONTENT_END]

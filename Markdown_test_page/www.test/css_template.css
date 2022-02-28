@@ -1,0 +1,364 @@
+body {
+    font-size: [HP_FONT_SIZE];
+    font-family: [HP_FONT_FAMILY];
+    color: [HP_FONT_COLOR];
+    min-width: 1199px;
+    max-width: 1899px;
+    margin: 0;
+    padding: 0;
+}
+
+/* *******************************  Header ********************************* */
+/* Logo */
+#menu0 { 
+    width: 100%;
+    height: 10em;
+    margin: 0;
+    background: [MENUE_COLOR1] url([HP_LOGO]) no-repeat center center;
+}
+/* Menu */
+#menu1 {
+    float: left;
+    width: [MENUE_WIDTH]%;
+    margin: 0;
+    padding: 0em 0 0 [MENUE_PADDING_LEFT]%;
+    list-style: none;
+    background: [MENUE_COLOR2] url(png/line_444_1px.png) repeat-x bottom left;
+}
+#menu1 li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 1.4em;
+    font-family: [HEADING_FONT_FAMILY];
+}
+#menu1 li.mact a {
+    padding-bottom: 5px;
+}
+#menu1 a {
+    float: left;
+    display: block;
+    margin: 0 3px 0 0;
+    padding: 4px 20px;
+    color: #444;
+    text-decoration: none;
+    border: 1px solid #444;
+    border-bottom: none;
+}
+#menu1 #m1home a {
+    background: [PCOLOR0] url([PCOLOR0_PNG1]) repeat-x top left;
+}
+#menu1 #m1home a:hover {
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-color: #000;
+    color: #000;
+    background: [PCOLOR0];
+}
+#menu1 #m11 a:hover,
+#menu1 #m12 a:hover,
+#menu1 #m13 a:hover,
+#menu1 #m14 a:hover,
+#menu1 #m15 a:hover,
+#menu1 #m16 a:hover {
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-color: #000;
+    color: #000;
+}
+#menu1 #m11 a {
+    background: [PCOLOR1] url([PCOLOR1_PNG1]) repeat-x top left;
+}
+#menu1 #m12 a {
+    background: [PCOLOR2] url([PCOLOR2_PNG1]) repeat-x top left;
+}
+#menu1 #m13 a {
+    background: [PCOLOR3] url([PCOLOR3_PNG1]) repeat-x top left;
+}
+#menu1 #m14 a {
+    background: [PCOLOR4] url([PCOLOR4_PNG1]) repeat-x top left;
+}
+#menu1 #m15 a {
+    background: [PCOLOR5] url([PCOLOR5_PNG1]) repeat-x top left;
+}
+#menu1 #m16 a {
+    background: [PCOLOR6] url([PCOLOR6_PNG1]) repeat-x top left;
+}
+/* *******************************  Sidebar ******************************** */
+/* sidebar backgrounds */
+
+#pyshp_1 {
+    background: [PCOLOR1] url([PCOLOR1_PNG2]) repeat-y bottom left;
+}
+#pyshp_2 {
+    background: [PCOLOR2] url([PCOLOR2_PNG2]) repeat-y bottom left;
+}
+#pyshp_3 {
+    background: [PCOLOR3] url([PCOLOR3_PNG2]) repeat-y bottom left;
+}
+#pyshp_4 {
+    background: [PCOLOR4] url([PCOLOR4_PNG2]) repeat-y bottom left;
+}
+#pyshp_5 {
+    background: [PCOLOR5] url([PCOLOR5_PNG2]) repeat-y bottom left;
+}
+#pyshp_6 {
+    background: [PCOLOR6] url([PCOLOR6_PNG2]) repeat-y bottom left;
+}
+#csidebar_1,
+#csidebar_2,
+#csidebar_3,
+#csidebar_4,
+#csidebar_5,
+#csidebar_6 {
+    float: left;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    font: 110% monospace;
+}
+#sidebar_1,
+#sidebar_2,
+#sidebar_3,
+#sidebar_4,
+#sidebar_5,
+#sidebar_6 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#sidebar_1 li.sbact a,
+#sidebar_2 li.sbact a,
+#sidebar_3 li.sbact a,
+#sidebar_4 li.sbact a,
+#sidebar_5 li.sbact a,
+#sidebar_6 li.sbact a {
+    padding-bottom: 5px;
+    border: 5px solid blue;
+}
+#sidebar_1 a:hover,
+#sidebar_2 a:hover,
+#sidebar_3 a:hover,
+#sidebar_4 a:hover,
+#sidebar_5 a:hover,
+#sidebar_6 a:hover {
+    font-weight: bold;
+    padding-bottom: 5px;
+    border: 5px solid blue;
+}
+#sidebar_1 a,
+#sidebar_2 a,
+#sidebar_3 a,
+#sidebar_4 a,
+#sidebar_5 a,
+#sidebar_6 a {
+    display: block;
+    margin: 3px 10px;
+    padding: 4px 10px;
+    color: #444;
+    text-decoration: none;
+    border: 3px ridge #0cf;
+    -moz-border-radius: 8%;
+    -khtml-border-radius: 8%;
+    color: blue;
+    font-size: 120%;
+}
+#sidebar_1 a {
+    background: [PCOLOR1] url([PCOLOR1_PNG1]) repeat-x top left;
+}
+#sidebar_2 a {
+    background: [PCOLOR2] url([PCOLOR2_PNG1]) repeat-x top left;
+}
+#sidebar_3 a {
+    background: [PCOLOR3] url([PCOLOR3_PNG1]) repeat-x top left;
+}
+#sidebar_4 a {
+    background: [PCOLOR4] url([PCOLOR4_PNG1]) repeat-x top left;
+}
+#sidebar_5 a {
+    background: [PCOLOR5] url([PCOLOR5_PNG1]) repeat-x top left;
+}
+#sidebar_6 a {
+    background: [PCOLOR6] url([PCOLOR6_PNG1]) repeat-x top left;
+}
+/* *******************************  Content *********************************** */
+h1 {
+    font-family: [HEADING_FONT_FAMILY];
+    color: [HEADING_1_COLOR];
+    font-size: 200%;
+}
+h1 em {
+    font-family: [HEADING_FONT_FAMILY];
+    font-size: 200%;
+    font-weight: bold;
+}
+h2 {
+    font-family: [HEADING_FONT_FAMILY];
+    color: [HEADING_2_4_COLOR];
+    font-size: 150%;
+}
+h3 {
+    font-family: [HEADING_FONT_FAMILY];
+    color: [HEADING_2_4_COLOR];
+}
+h4 {
+    font-family: [HEADING_FONT_FAMILY];
+    color: [HEADING_2_4_COLOR];
+}
+
+p {
+    font-size: 110%;
+}
+p.Aufgabe {
+    color: red;
+    font-size: 100%;
+    margin-top: 2em;
+}
+figcaption {
+    color: blue;
+    font-size: 80%;
+}
+em {
+    font-style: italic;
+}
+code {
+    font: monospace;
+    font-size: 120%;
+    font-weight: bold;
+}
+strong {
+    font-weight: bold;
+}
+ol {
+    color: #333;
+    font-size: 110%;
+    list-style-type: upper-roman;
+}
+table {
+    color: #333;
+    font-size: 110%;
+}
+td,
+th {
+    padding-right: 10px;
+}
+
+#projekte th {
+    text-align: left;
+}
+#projekte td {
+    padding-left: 20px;
+}
+#projekte img {
+    margin-top: 20px;
+}
+#rahmen {
+    padding: 10px;
+    border: 4px solid #444;
+    text-align: center;
+}
+#rahmen2 {
+    padding: 10px;
+    border: 6px solid #396;
+    text-align: center;
+}
+#img_center {
+    text-align: center;
+}
+ul.pvdaten {
+    list-style: none;
+}
+#content_home {
+    font: 120% monospace;
+    float: left;
+    padding: 0 2% 0 2%;
+    width: 96%;
+    background-color: [PCOLOR0];
+}
+#content_1,
+#content_2,
+#content_3,
+#content_4,
+#content_5,
+#content_6 {
+    font: 120% serif;
+    float: left;
+    padding: 0 2% 0 2%;
+    width: 76%;
+}
+#content_1 {
+    background-color: [PCOLOR1];
+}
+#content_2 {
+    background-color: [PCOLOR2];
+}
+#content_3 {
+    background-color: [PCOLOR3];
+}
+#content_4 {
+    background-color: [PCOLOR4];
+}
+#content_5 {
+    background-color: [PCOLOR5];
+}
+#content_6 {
+    background-color: [PCOLOR6];
+}
+#content_disclaimer {
+    font: 120% serif;
+    text-align: justify;
+    float: left;
+    padding: 0 2% 0 2%;
+    width: 96%;
+    background-color: [PCOLOR_DISCLAIMER];
+}
+#content_news {
+    font: 120% serif;
+    text-align: justify;
+    float: left;
+    padding: 0 2% 0 2%;
+    width: 96%;
+    background-color: [PCOLOR_NEWS];
+}
+#content_news th {
+    font: 130% serif;
+    font-weight: bold;
+    color: blue;
+}
+#content_sitemap {
+    font: 120% serif;
+    text-align: justify;
+    float: left;
+    padding: 0 2% 0 2%;
+    width: 96%;
+    background-color: [PCOLOR_SITEMAP];
+}
+#content_sitemap em {
+    font-size: 120%;
+    font-weight: normal;
+}
+#content_sitemap a {
+    font: 130% serif;
+    font-weight: bold;
+    display: block;
+    /*width: 600px;*/
+}
+/* *******************************  Footer *********************************** */
+
+#footer {
+    float: left;
+    width: 100%;
+    background-color: [MENUE_COLOR3];
+    font-size: 1.4em;
+    font-family: [HEADING_FONT_FAMILY];
+}
+#footerl1 {
+    float: left;
+}
+#footerl2 {
+    float: right;
+}
+#footerl3 {
+    text-align: center;
+    list-style: none;
+}
