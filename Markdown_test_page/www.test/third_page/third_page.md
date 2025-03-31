@@ -1,5 +1,5 @@
 [TITLE]
-second
+third
 [KEYWORDS]
 test, python, pyshpcreator
 [KEYWORDS_END]
@@ -7,8 +7,8 @@ test, python, pyshpcreator
 [SIDEBAR_END]
 [CONTENT]
 
-# Second page
+# Third page
 
-Hi, this is my text and no picture :)
+Hi, this is the thirs page!
 
 [CONTENT_END]
