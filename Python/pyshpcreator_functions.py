@@ -604,7 +604,6 @@ class PyshpreatorFunctions:
             dir_list = self.walk_directories(self.hp_dir_name, blacklist)
             self.move_archive_files_to_end(self.hp_dir_name, dir_list)
             self.archive_list = self.create_archive_list(self.hp_dir_name, dir_list)
-            print(self.archive_list)
             self.send_2_gui_dir_lists(self.hp_dir_name, dir_list)
             self.generate_sitemap(self.hp_dir_name, dir_list)
             self.generate_index_files(self.hp_dir_name, dir_list)
@@ -686,11 +685,11 @@ class PyshpreatorFunctions:
         for i in range (len(ac_list)):
             if len(ac_list[i]) == 3:
                 filename = dir_list[ac_list[i][0]][ac_list[i][1]][ac_list[i][2]]
-                print(filename)
+                #print(filename)
                 af_list[i].append(filename)
             if len(ac_list[i]) == 4:
                 filename = dir_list[ac_list[i][0]][ac_list[i][1]][ac_list[i][2]][ac_list[i][3]]
-                print(filename)
+                #print(filename)
                 af_list[i].append(filename)
                 self.archives_flist = af_list
         return af_list

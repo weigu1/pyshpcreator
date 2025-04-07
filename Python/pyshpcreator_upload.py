@@ -30,10 +30,9 @@ class Upload:
             text = f"Remote directory exists: {remote_dir}"
             print(text)
         except FileNotFoundError:
-            text = f"Remote directory does not exist: {remote_dir}"
+            text = f"Remote directory does not exist: {remote_dir}. Creating the directory"
             print(text)
             sftp.mkdir(remote_dir)
-            return text
         except Exception as e:
             text = f"Error checking remote directory: {e}"
             print(text)
