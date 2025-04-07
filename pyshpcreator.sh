@@ -1,3 +1,3 @@
 #!/bin/bash
-source $HOME/Python/pyshpcreator/.venv/bin/activate
-python $HOME/python/pyshpcreator/pyshpcreator.py
+source $HOME/pyshpcreator/Python/.venv/bin/activate
+python $HOME/pyshpcreator/Python/pyshpcreator.py
