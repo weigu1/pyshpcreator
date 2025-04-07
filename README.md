@@ -18,3 +18,5 @@ The homepage can be automatically uploaded to the server.
 
 New in Version 3 are the buttons to create quick links from third header and to check links in the local directory.
 It is also now possible to mark directories as archieve (old, will not be updated).
+
+Everything is contained in a virtual environment, and a script makes it easy to run the program.
