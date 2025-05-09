@@ -44,66 +44,66 @@ class GUI:
 
     def check_queue_from_main(self):
         try:
-            while True:
-                message = self.queue_2_gui.get_nowait()
-                if len(message) == 1:
-                    self.txt_win.insert(self.end, message)
-                else:
-                    self.txt_win.insert(self.end, f"{message}\n")
-                self.txt_win.see("end")
-                message = message.split('\n')
-                if message[0] == "Homepage names detected:":
-                    self.hp_dir_names = message[1:]
-                    #print(self.hp_dir_names)
-                    try:
-                        self.combobox_hpdir['values'] = self.hp_dir_names
-                        self.combobox_hpdir.current(0)
-                    except:
-                        pass
-                if message[0] == "File_list_4_quick_links:":
-                    self.quick_links_files = message[1:]
-                    #print(self.quick_links_files)
-                    try:
-                        self.combobox_quick_links['values'] = self.quick_links_files
-                        self.combobox_quick_links.current(0)
-                    except:
-                        pass
 
-                if message[0] == "Dir_list_4_links_2_check:":
-                    self.check_links_dirs = message[1:]
-                    #print(self.check_links_dirs)
-                    try:
-                        self.combobox_check_links['values'] = self.check_links_dirs
-                        self.combobox_check_links.current(0)
-                    except:
-                        pass
+            message = self.queue_2_gui.get_nowait()
+            if len(message) == 1:
+                self.txt_win.insert(self.end, message)
+            else:
+                self.txt_win.insert(self.end, f"{message}\n")
+            self.txt_win.see("end")
+            message = message.split('\n')
+            if message[0] == "Homepage names detected:":
+                self.hp_dir_names = message[1:]
+                #print(self.hp_dir_names)
+                try:
+                    self.combobox_hpdir['values'] = self.hp_dir_names
+                    self.combobox_hpdir.current(0)
+                except:
+                    pass
+            if message[0] == "File_list_4_quick_links:":
+                self.quick_links_files = message[1:]
+                #print(self.quick_links_files)
+                try:
+                    self.combobox_quick_links['values'] = self.quick_links_files
+                    self.combobox_quick_links.current(0)
+                except:
+                    pass
+
+            if message[0] == "Dir_list_4_links_2_check:":
+                self.check_links_dirs = message[1:]
+                #print(self.check_links_dirs)
+                try:
+                    self.combobox_check_links['values'] = self.check_links_dirs
+                    self.combobox_check_links.current(0)
+                except:
+                    pass
         except queue.Empty:
             pass
         self.mainWin.after(100, self.check_queue_from_main)  # Check the queue again after 100ms
 
     def on_butt_create_pressed(self):
-      text = self.hp_dir_name.get()
-      index = self.combobox_hpdir.current()
-      self.txt_win.insert(self.end, f"Chosen homepage directory name: {text}\n")
-      text = f"hp_dir_name:\n{text}\n{index}"
-      self.queue_2_main.put(text)  # Add the text to queue_2_main
-      self.set_flag(self.flags_2_main[0], self.widget_texts_dict[self.widget_texts_list[2]])
+        text = self.hp_dir_name.get()
+        index = self.combobox_hpdir.current()
+        self.txt_win.insert(self.end, f"Chosen homepage directory name: {text}\n")
+        text = f"hp_dir_name:\n{text}\n{index}"
+        self.queue_2_main.put(text)  # Add the text to queue_2_main
+        self.set_flag(self.flags_2_main[0], self.widget_texts_dict[self.widget_texts_list[2]])
 
     def on_butt_quick_links_pressed(self):
-      text = self.quick_links_file.get()
-      index = self.combobox_quick_links.current()
-      self.txt_win.insert(self.end, f"Chosen quick links file name: {text}\n")
-      text = f"quick_links_file_name:\n{text}\n{index}"
-      self.queue_2_main.put(text)  # Add the text to queue_2_main
-      self.set_flag(self.flags_2_main[1], self.widget_texts_dict[self.widget_texts_list[3]])
+        text = self.quick_links_file.get()
+        index = self.combobox_quick_links.current()
+        self.txt_win.insert(self.end, f"Chosen quick links file name: {text}\n")
+        text = f"quick_links_file_name:\n{text}\n{index}"
+        self.queue_2_main.put(text)  # Add the text to queue_2_main
+        self.set_flag(self.flags_2_main[1], self.widget_texts_dict[self.widget_texts_list[3]])
 
     def on_butt_check_links_pressed(self):
-      text = self.check_links_dir.get()
-      index = self.combobox_check_links.current()
-      #self.txt_win.insert(self.end, f"Chosen check links directory name: {text}\n")
-      text = f"check_links_dir_name:\n{text}\n{index}"
-      self.queue_2_main.put(text)  # Add the text to queue_2_main
-      self.set_flag(self.flags_2_main[2], self.widget_texts_dict[self.widget_texts_list[5]]),
+        text = self.check_links_dir.get()
+        index = self.combobox_check_links.current()
+        #self.txt_win.insert(self.end, f"Chosen check links directory name: {text}\n")
+        text = f"check_links_dir_name:\n{text}\n{index}"
+        self.queue_2_main.put(text)  # Add the text to queue_2_main
+        self.set_flag(self.flags_2_main[2], self.widget_texts_dict[self.widget_texts_list[5]]),
 
     def clear_textwindow(self):
         self.txt_win.delete(1.0, END)
